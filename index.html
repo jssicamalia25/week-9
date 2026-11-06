@@ -1,7 +1,168 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-  </head>
-  <body>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07 Card Hover Glow</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 16px 24px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+      position: sticky;
+      bottom: 0;
+      z-index: 100;
+      background-color: #0f172a;
+      color: #94a3b8;
+      padding: 12px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    main {
+      flex: 1;
+      padding: 24px 16px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      flex: 0 1 260px;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px) scale(1.03);
+      border-color: rgba(249, 115, 22, 0.4);
+      box-shadow: 0 10px 24px rgba(249, 115, 22, 0.18), 0 0 14px rgba(251, 146, 60, 0.28);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card p {
+      padding: 12px 14px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Galeri Foto (Card Hover Glow)</h1>
+  </header>
+
+  <main>
+    <div class="flex-container">
+      <div class="card">
+        <img src="images-uniform/karya1.jpg" alt="Seseorang memegang kamera digital retro Fujifilm X100 silver">
+        <p>Pohon yang digambar dengan cat</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/karya2.jpg" alt="Depo stasiun perkeretaapian barang saat matahari terbit keemasan">
+        <p>Ikan hias diwarna dengan krayon</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/karya3.jpg" alt="Dermaga kayu panjang menjorok ke danau pegunungan berair jernih">
+        <p>Keindahan kupu-kupu dengan pensil warna</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/uniform-14-800x600.jpg" alt="Gulungan jerami gandum silinder di ladang pertanian berkabut">
+        <p>Gulungan jerami gandum silinder di ladang pertanian berkabut</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/uniform-22-800x600.jpg" alt="Puncak gunung Matterhorn bersalju megah">
+        <p>Puncak gunung Matterhorn bersalju megah</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/uniform-26-800x600.jpg" alt="Induk beruang cokelat grizzly berjalan bersama dua anaknya">
+        <p>Induk beruang cokelat grizzly berjalan bersama dua anaknya</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/uniform-32-800x600.jpg" alt="Haluan perahu kano kayu dengan dayung bersandar di tepi danau">
+        <p>Haluan perahu kano kayu dengan dayung bersandar di tepi danau</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/uniform-42-800x600.jpg" alt="Bintang jatuh meluncur melintasi galaksi Bima Sakti">
+        <p>Bintang jatuh meluncur melintasi galaksi Bima Sakti</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/uniform-02-800x600.jpg" alt="Rel kereta api tepi pantai memanjang lurus">
+        <p>Rel kereta api tepi pantai memanjang lurus</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/uniform-09-800x600.jpg" alt="Kincir angin turbin listrik di atas perbukitan hijau">
+        <p>Kincir angin turbin listrik di atas perbukitan hijau</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/uniform-13-800x600.jpg" alt="Papan selancar tergeletak di pasir pantai saat sunset">
+        <p>Papan selancar tergeletak di pasir pantai saat sunset</p>
+      </div>
+
+      <div class="card">
+        <img src="images-uniform/uniform-36-800x600.jpg" alt="Pemandian air panas Blue Lagoon Islandia dengan uap mengepul">
+        <p>Pemandian air panas Blue Lagoon Islandia dengan uap mengepul</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Latihan Layout Web - Card Hover Glow</p>
+  </footer>
+
+</body>
 </html>
